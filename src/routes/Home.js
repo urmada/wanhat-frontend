@@ -3,12 +3,15 @@ import {useStyletron} from 'baseui';
 import {Button,SIZE,SHAPE} from 'baseui/button';
 
 function Home(){
+
     const [css] = useStyletron();
 
     return(
         <div
             className={css({
-            color:'black',
+		    minWidth: '800px',
+		    width: '100%',
+ 	    color:'black',
             paddingTop: '1%',
             display: 'flex',
             flexDirection: 'column',
@@ -28,6 +31,7 @@ function Home(){
                 width: '400px',
                 height: '400px',
                 backgroundImage: 'url("https://github.com/urmada/images/blob/8b2c68a2a02b1bd711537dd3ab2137e79881b1e2/Vanhojen_tanssit.jpg?raw=true")',
+		backgroundPosition: 'center',
                 backgroundSize: 'contain',
                 backgroundRepeat: 'no-repeat'
             })} 
@@ -39,7 +43,8 @@ function Home(){
                 width: '400px',
                 height: '400px',
                 backgroundImage: 'url("https://github.com/urmada/images/blob/8b2c68a2a02b1bd711537dd3ab2137e79881b1e2/Vanhojen_tanssit.jpg?raw=true")',
-                backgroundSize: 'contain',
+                backgroundPosition: 'center',
+		backgroundSize: 'contain',
                 backgroundRepeat: 'no-repeat'
             })} 
             >

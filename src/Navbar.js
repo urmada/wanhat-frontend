@@ -1,8 +1,8 @@
 import * as React from 'react';
 import {
   Link,
-  StyledLink,
   useNavigate}from 'react-router-dom';
+import { StyledLink } from "baseui/link";
 import {useStyletron} from 'baseui';
 import {Button,SIZE,SHAPE} from 'baseui/button';
 import {Layer} from 'baseui/layer';
@@ -12,7 +12,8 @@ import {
   setItemActive,
   NavItem,
 } from 'baseui/app-nav-bar';
-import Home from './Home';
+
+import Home from './routes/Home';
 
 function Navbar({children}) {
   
@@ -75,11 +76,12 @@ function Navbar({children}) {
               mainItems={mainItems}
               userItems={userItems}
               mapItemToNode={(item) => (
-                  <Link to={item.path}
-                  className={css({
-                    color:'white',
-                    textDecoration: 'none'
-                  })}
+	        <Link 
+		      to={item.path}
+		      className={css({
+                    	color:'white',
+                    	textDecoration: 'none'
+               	})}
                   >{item.label}</Link>
               )}
               onMainItemSelect={(item) => {

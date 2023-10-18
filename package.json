@@ -1,5 +1,5 @@
 {
-  "name": "my-app",
+  "name": "routing",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -13,7 +13,8 @@
     "react-scripts": "5.0.1",
     "styletron-engine-atomic": "^1.6.2",
     "styletron-react": "^6.1.1",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "wpapi": "^1.2.2"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -1,13 +1,130 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.hopeui_style-breadcrumb {
+  display: none !important;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
+/* In case the user logged in and has the admin bar activated */
+.admin-bar #page {
+  min-height: calc(100vh - 32px); /* WP's admin bar height is 32px */
+}
+
+#root {
+  --border: 0.063em solid var(--border-color-light);
+  border-top: var(--border);
+  display: flex;
+  flex-grow: 1;
+  width: 100%;
+}
+
+#sidebar {
+  width: 22rem;
+  border-right: var(--border);
+  display: flex;
+  flex-direction: column;
+}
+
+#sidebar > * {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+#sidebar h1 {
+  font-size: 1rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 1rem 2rem;
+  border-top: var(--border);
+  order: 1;
+  line-height: 1;
+}
+
+#sidebar > div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: var(--border);
+}
+
+#search-form input {
+  padding-left: 2.125rem;
+  padding-right: 0.5rem;
+}
+
+#sidebar > div form button {
+  min-width: fit-content;
+}
+
+#sidebar > div form i {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 2.375rem;
+  height: 2.375rem;
+  line-height: 2.375rem;
+  padding-top: 0.125rem;
+  text-align: center;
+  pointer-events: none;
+}
+
+#sidebar nav {
+  flex: 1;
+  overflow: auto;
+  padding-top: 1rem;
+}
+
+#sidebar nav a:hover {
+  background: var(--color-theme-secondary-light);
+}
+
+#detail {
+  background-color: var(--color-theme-white);
+  flex: 1;
+  padding: 2rem 4rem;
+  width: 100%;
+}
+
+.btn {
+  font-size: var(--font-size-normal);
+  font-family: var(--highlight-font-family);
+  letter-spacing: var(--letter-spacing);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--font-line-height-body);
+  border-radius: var(--box-border-radius);
+  padding: 0.5em 1.5em;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  cursor: pointer;
+  overflow: hidden;
+  text-decoration: none;
+  transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+}
+.btn-primary {
+  color: var(--color-theme-white);
+  background-color: var(--color-theme-primary);
+}
+.btn-outline-primary {
+  color: var(--color-theme-primary);
+  background-color: var(--color-theme-white);
+  border: 1px solid var(--color-theme-primary);
+}
+
+.btn-primary:hover,
+.btn-outline-primary:hover {
+  background: var(--color-theme-primary-dark);
+  color: var(--color-theme-white);
+}
+
+
